@@ -1,0 +1,37 @@
+name: Bug report
+description: Something doesn't work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for reporting! **Never paste your API key or `ai_config.json`.**"
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Load a track on player 2\n2. …"
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      placeholder: "macOS 15.1 · Python 3.12 · Beat Link Trigger 8.0.0 · djlights 0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Hardware
+      placeholder: "2× CDJ-3000, DJM-A9, WLED 0.15 on ESP32 (1500 LEDs)"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Relevant lines from djlights_*.log, djlights_diag.log, or the BLT console ([VP] lines).
+      render: text

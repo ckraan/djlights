@@ -1,0 +1,513 @@
+{
+  "_meta": {
+    "title": "Tech House Demo v2 — 125 BPM + Back Strip",
+    "structure": "intro → verse → down → up → chorus → up → chorus → down → verse → up → chorus → outro",
+    "total_beats": 544,
+    "duration_s": 261,
+    "bpm": 125,
+    "back_strip_notes": [
+      "intro/verse/down/outro: back strip OFF — never glow during low-energy sections",
+      "up1 (beat 129): pulse_build starts subtle, back_trigger impact_flash at beat 24 as tension peaks",
+      "chorus1 (beat 161): impact_flash — full-rig travelers on every beat, strobe_burst at beats 16/32/48",
+      "up2 (beat 225): pulse_build again, stays on through pre-drop",
+      "chorus2 (beat 257): impact_flash but step-down — no strobe_burst triggers (breathing room)",
+      "down2/verse2: OFF",
+      "up3 (beat 417): pulse_build, back_trigger impact_flash at beat 24 for final anticipation",
+      "chorus3 (beat 449): FINALE — impact_flash with strobe_burst at 16/32/48/56 for maximum energy"
+    ]
+  },
+  "plan": [
+    {
+      "phrase_index": 0,
+      "kind": "intro",
+      "beat_start": 1,
+      "beat_end": 32,
+      "effect": "NightSky",
+      "palette": "DeepBlue",
+      "brightness": 0.28,
+      "speed": 0.42,
+      "beat_overlay": "off",
+      "render_mode": "full",
+      "direction": "forward",
+      "grouping": 2,
+      "spacing": 14,
+      "density": 0.25,
+      "active_strips": [3],
+      "strip_offset":    [0, 0, 0, 0, 0],
+      "strip_speed_mul": [0.97, 0.98, 1.0, 1.02, 1.03],
+      "strip_reverse":   [false, false, false, false, false],
+      "strip_mirror":    [5, null, null, null, 1],
+      "back_accent": "off",
+      "mid_phrase_changes": [
+        {
+          "at_beat": 16,
+          "active_strips": [2, 3, 4],
+          "brightness": 0.35,
+          "palette": "Ocean"
+        }
+      ]
+    },
+    {
+      "phrase_index": 1,
+      "kind": "verse",
+      "beat_start": 33,
+      "beat_end": 96,
+      "effect": "RhythmBlocks",
+      "palette": "Neon",
+      "brightness": 0.52,
+      "speed": 0.72,
+      "beat_overlay": "bar",
+      "render_mode": "full",
+      "direction": "forward",
+      "grouping": 3,
+      "spacing": 9,
+      "density": 0.65,
+      "active_strips": [1, 3, 5],
+      "strip_offset":    [-25, -12, 0, 12, 25],
+      "strip_speed_mul": [0.88, 0.94, 1.0, 1.06, 1.12],
+      "strip_reverse":   [false, false, false, false, false],
+      "strip_mirror":    [null, null, null, null, null],
+      "back_accent": "off",
+      "mid_phrase_changes": [
+        {
+          "at_beat": 32,
+          "palette": "Ocean",
+          "spacing": 7,
+          "brightness": 0.57,
+          "beat_overlay": "2beat",
+          "active_strips": [2, 3, 4],
+          "strip_offset": [-20, -10, 0, 10, 20]
+        }
+      ]
+    },
+    {
+      "phrase_index": 2,
+      "kind": "down",
+      "beat_start": 97,
+      "beat_end": 128,
+      "effect": "AuroraWave",
+      "palette": "Violet",
+      "brightness": 0.52,
+      "speed": 0.55,
+      "beat_overlay": "off",
+      "render_mode": "full",
+      "direction": "forward",
+      "grouping": 1,
+      "spacing": 16,
+      "density": 0.35,
+      "active_strips": [2, 3, 4],
+      "strip_offset":    [0, -12, 0, 12, 0],
+      "strip_speed_mul": [0.92, 0.96, 1.0, 0.96, 0.92],
+      "strip_reverse":   [false, false, false, false, false],
+      "strip_mirror":    [null, null, null, null, null],
+      "back_accent": "off",
+      "mid_phrase_changes": [
+        {
+          "at_beat": 16,
+          "palette": "DeepBlue",
+          "brightness": 0.50,
+          "strip_offset": [0, -8, 0, 8, 0]
+        }
+      ]
+    },
+    {
+      "phrase_index": 3,
+      "kind": "up",
+      "beat_start": 129,
+      "beat_end": 160,
+      "_comment": "Back starts pulse_build, kicks to impact_flash at beat 24 as tension peaks",
+      "effect": "PressureBeams",
+      "palette": "Sunset",
+      "brightness": 0.65,
+      "speed": 0.82,
+      "beat_overlay": "2beat",
+      "render_mode": "cascade",
+      "direction": "forward",
+      "grouping": 3,
+      "spacing": 8,
+      "density": 0.70,
+      "active_strips": [1, 3, 5],
+      "strip_offset":    [-20, -10, 0, 10, 20],
+      "strip_speed_mul": [0.80, 0.90, 1.0, 1.10, 1.22],
+      "strip_reverse":   [false, false, false, false, false],
+      "strip_mirror":    [null, null, null, null, null],
+      "back_accent": "pulse_build",
+      "mid_phrase_changes": [
+        {
+          "at_beat": 8,
+          "speed": 1.05,
+          "spacing": 7
+        },
+        {
+          "at_beat": 16,
+          "brightness": 0.74,
+          "speed": 1.28,
+          "active_strips": [1, 2, 3, 4, 5],
+          "strip_offset": [-40, -20, 0, 20, 40]
+        },
+        {
+          "at_beat": 24,
+          "brightness": 0.80,
+          "speed": 1.52,
+          "beat_overlay": "2beat",
+          "strip_offset": [-60, -30, 0, 30, 60],
+          "strip_speed_mul": [0.65, 0.82, 1.0, 1.22, 1.50],
+          "back_trigger": "impact_flash"
+        },
+        {
+          "at_beat": 28,
+          "brightness": 0.17,
+          "beat_overlay": "off"
+        }
+      ]
+    },
+    {
+      "phrase_index": 4,
+      "kind": "chorus",
+      "beat_start": 161,
+      "beat_end": 224,
+      "_comment": "PEAK DROP — back strip fires impact_flash on drop, strobe_burst reinforces every 16 beats",
+      "effect": "ImpactWaves",
+      "palette": "Fire",
+      "brightness": 0.92,
+      "speed": 2.0,
+      "beat_overlay": "beat",
+      "render_mode": "tile",
+      "direction": "mirror",
+      "grouping": 5,
+      "spacing": 5,
+      "density": 1.0,
+      "active_strips": [1, 2, 3, 4, 5],
+      "strip_offset":    [-80, -40, 0, 40, 80],
+      "strip_speed_mul": [0.55, 0.75, 1.0, 1.35, 1.80],
+      "strip_reverse":   [false, true, false, true, false],
+      "strip_mirror":    [5, 4, null, null, null],
+      "back_accent": "impact_flash",
+      "mid_phrase_changes": [
+        {
+          "at_beat": 8,
+          "palette": "Cyberpunk"
+        },
+        {
+          "at_beat": 16,
+          "direction": "forward",
+          "grouping": 4,
+          "spacing": 4,
+          "strip_offset": [-90, -45, 0, 45, 90],
+          "back_trigger": "strobe_burst"
+        },
+        {
+          "at_beat": 32,
+          "palette": "Crimson",
+          "brightness": 0.95,
+          "active_strips": [1, 3, 5],
+          "strip_speed_mul": [0.50, 0.72, 1.0, 1.42, 1.90],
+          "back_trigger": "strobe_burst"
+        },
+        {
+          "at_beat": 48,
+          "active_strips": [2, 4],
+          "palette": "DarkRed",
+          "back_trigger": "strobe_burst"
+        },
+        {
+          "at_beat": 56,
+          "active_strips": [1, 2, 3, 4, 5]
+        }
+      ]
+    },
+    {
+      "phrase_index": 5,
+      "kind": "up",
+      "beat_start": 225,
+      "beat_end": 256,
+      "_comment": "Second build — back stays pulse_build throughout, no early impact_flash",
+      "effect": "EscalatorSteps",
+      "palette": "Orange",
+      "brightness": 0.62,
+      "speed": 0.78,
+      "beat_overlay": "2beat",
+      "render_mode": "cascade",
+      "direction": "forward",
+      "grouping": 3,
+      "spacing": 9,
+      "density": 0.72,
+      "active_strips": [1, 3, 5],
+      "strip_offset":    [-18, -9, 0, 9, 18],
+      "strip_speed_mul": [0.82, 0.91, 1.0, 1.09, 1.18],
+      "strip_reverse":   [false, false, false, false, false],
+      "strip_mirror":    [null, null, null, null, null],
+      "back_accent": "pulse_build",
+      "mid_phrase_changes": [
+        {
+          "at_beat": 8,
+          "speed": 1.02,
+          "spacing": 7
+        },
+        {
+          "at_beat": 16,
+          "brightness": 0.70,
+          "speed": 1.22,
+          "active_strips": [1, 2, 3, 4, 5],
+          "strip_offset": [-35, -18, 0, 18, 35]
+        },
+        {
+          "at_beat": 24,
+          "brightness": 0.76,
+          "speed": 1.45,
+          "beat_overlay": "2beat",
+          "palette": "Amber",
+          "strip_offset": [-55, -28, 0, 28, 55],
+          "strip_speed_mul": [0.70, 0.85, 1.0, 1.18, 1.42]
+        }
+      ]
+    },
+    {
+      "phrase_index": 6,
+      "kind": "chorus",
+      "beat_start": 257,
+      "beat_end": 320,
+      "_comment": "STEP-DOWN chorus — back strip fires impact_flash but NO strobe_burst (breathing room)",
+      "effect": "ChromaRush",
+      "palette": "Sunset",
+      "brightness": 0.62,
+      "speed": 1.12,
+      "beat_overlay": "bar",
+      "render_mode": "tile",
+      "direction": "forward",
+      "grouping": 3,
+      "spacing": 7,
+      "density": 0.75,
+      "active_strips": [1, 3, 5],
+      "strip_offset":    [-35, -18, 0, 18, 35],
+      "strip_speed_mul": [0.82, 0.91, 1.0, 1.09, 1.18],
+      "strip_reverse":   [false, false, false, false, false],
+      "strip_mirror":    [null, null, null, null, null],
+      "back_accent": "impact_flash",
+      "mid_phrase_changes": [
+        {
+          "at_beat": 16,
+          "palette": "Amber",
+          "active_strips": [2, 3, 4],
+          "strip_offset": [-30, -15, 0, 15, 30]
+        },
+        {
+          "at_beat": 32,
+          "brightness": 0.60,
+          "speed": 1.05,
+          "active_strips": [1, 3, 5]
+        },
+        {
+          "at_beat": 48,
+          "palette": "Orange",
+          "direction": "reverse",
+          "active_strips": [2, 4]
+        }
+      ]
+    },
+    {
+      "phrase_index": 7,
+      "kind": "down",
+      "beat_start": 321,
+      "beat_end": 352,
+      "effect": "EmberDrift",
+      "palette": "Ocean",
+      "brightness": 0.52,
+      "speed": 0.58,
+      "beat_overlay": "off",
+      "render_mode": "full",
+      "direction": "forward",
+      "grouping": 1,
+      "spacing": 18,
+      "density": 0.32,
+      "active_strips": [1, 3, 5],
+      "strip_offset":    [-15, -8, 0, 8, 15],
+      "strip_speed_mul": [0.93, 0.97, 1.0, 0.97, 0.93],
+      "strip_reverse":   [false, false, false, false, false],
+      "strip_mirror":    [null, null, null, null, null],
+      "back_accent": "off",
+      "mid_phrase_changes": [
+        {
+          "at_beat": 16,
+          "palette": "Purple",
+          "brightness": 0.50,
+          "strip_offset": [-10, -5, 0, 5, 10]
+        }
+      ]
+    },
+    {
+      "phrase_index": 8,
+      "kind": "verse",
+      "beat_start": 353,
+      "beat_end": 416,
+      "effect": "MeteorShower",
+      "palette": "DeepHouse",
+      "brightness": 0.55,
+      "speed": 0.78,
+      "beat_overlay": "bar",
+      "render_mode": "full",
+      "direction": "forward",
+      "grouping": 3,
+      "spacing": 8,
+      "density": 0.68,
+      "active_strips": [2, 3, 4],
+      "strip_offset":    [0, -15, 0, 15, 0],
+      "strip_speed_mul": [0.86, 0.93, 1.0, 1.07, 1.14],
+      "strip_reverse":   [false, false, false, false, false],
+      "strip_mirror":    [null, null, null, null, null],
+      "back_accent": "off",
+      "mid_phrase_changes": [
+        {
+          "at_beat": 32,
+          "palette": "Pink",
+          "active_strips": [1, 3, 5],
+          "spacing": 6,
+          "brightness": 0.58,
+          "beat_overlay": "2beat",
+          "strip_offset": [-25, -12, 0, 12, 25]
+        }
+      ]
+    },
+    {
+      "phrase_index": 9,
+      "kind": "up",
+      "beat_start": 417,
+      "beat_end": 448,
+      "_comment": "FINAL BUILD — pulse_build through beat 16, switches to impact_flash at beat 24 as final anticipation",
+      "effect": "TurbineBeam",
+      "palette": "Neon",
+      "brightness": 0.68,
+      "speed": 0.90,
+      "beat_overlay": "2beat",
+      "render_mode": "cascade",
+      "direction": "forward",
+      "grouping": 3,
+      "spacing": 7,
+      "density": 0.75,
+      "active_strips": [1, 3, 5],
+      "strip_offset":    [-22, -11, 0, 11, 22],
+      "strip_speed_mul": [0.78, 0.89, 1.0, 1.11, 1.24],
+      "strip_reverse":   [false, false, false, false, false],
+      "strip_mirror":    [null, null, null, null, null],
+      "back_accent": "pulse_build",
+      "mid_phrase_changes": [
+        {
+          "at_beat": 8,
+          "speed": 1.12,
+          "spacing": 6
+        },
+        {
+          "at_beat": 16,
+          "brightness": 0.76,
+          "speed": 1.35,
+          "active_strips": [1, 2, 3, 4, 5],
+          "strip_offset": [-45, -22, 0, 22, 45],
+          "strip_speed_mul": [0.68, 0.84, 1.0, 1.18, 1.42]
+        },
+        {
+          "at_beat": 24,
+          "brightness": 0.82,
+          "speed": 1.62,
+          "beat_overlay": "2beat",
+          "strip_offset": [-68, -34, 0, 34, 68],
+          "strip_speed_mul": [0.58, 0.78, 1.0, 1.28, 1.65],
+          "back_trigger": "impact_flash"
+        },
+        {
+          "at_beat": 28,
+          "palette": "Fire",
+          "strip_speed_mul": [0.52, 0.75, 1.0, 1.32, 1.72]
+        }
+      ]
+    },
+    {
+      "phrase_index": 10,
+      "kind": "chorus",
+      "beat_start": 449,
+      "beat_end": 512,
+      "_comment": "FINALE — back fires impact_flash from beat 1, strobe_burst at 16/32/48/56 for relentless energy",
+      "effect": "BeatStrobe",
+      "palette": "Crimson",
+      "brightness": 0.90,
+      "speed": 1.75,
+      "beat_overlay": "2beat",
+      "render_mode": "tile",
+      "direction": "mirror",
+      "grouping": 5,
+      "spacing": 4,
+      "density": 1.0,
+      "active_strips": [1, 2, 3, 4, 5],
+      "strip_offset":    [-85, -42, 0, 42, 85],
+      "strip_speed_mul": [0.52, 0.74, 1.0, 1.38, 1.85],
+      "strip_reverse":   [true, false, false, false, true],
+      "strip_mirror":    [5, 4, null, null, null],
+      "back_accent": "impact_flash",
+      "mid_phrase_changes": [
+        {
+          "at_beat": 8,
+          "palette": "Amber",
+          "speed": 1.78
+        },
+        {
+          "at_beat": 16,
+          "direction": "forward",
+          "grouping": 6,
+          "active_strips": [1, 3, 5],
+          "strip_offset": [-95, -48, 0, 48, 95],
+          "back_trigger": "strobe_burst"
+        },
+        {
+          "at_beat": 32,
+          "palette": "Contrast",
+          "brightness": 0.93,
+          "active_strips": [1, 2, 3, 4, 5],
+          "direction": "mirror",
+          "back_trigger": "strobe_burst"
+        },
+        {
+          "at_beat": 48,
+          "active_strips": [2, 4],
+          "palette": "Orange",
+          "back_trigger": "strobe_burst"
+        },
+        {
+          "at_beat": 56,
+          "active_strips": [1, 2, 3, 4, 5],
+          "brightness": 0.95,
+          "back_trigger": "strobe_burst"
+        }
+      ]
+    },
+    {
+      "phrase_index": 11,
+      "kind": "outro",
+      "beat_start": 513,
+      "beat_end": 544,
+      "effect": "TrailingOff",
+      "palette": "Monochrome",
+      "brightness": 0.30,
+      "speed": 0.38,
+      "beat_overlay": "off",
+      "render_mode": "full",
+      "direction": "forward",
+      "grouping": 2,
+      "spacing": 18,
+      "density": 0.20,
+      "active_strips": [2, 3, 4],
+      "strip_offset":    [0, -5, 0, 5, 0],
+      "strip_speed_mul": [0.96, 0.98, 1.0, 0.98, 0.96],
+      "strip_reverse":   [false, false, false, false, false],
+      "strip_mirror":    [null, null, null, null, null],
+      "back_accent": "off",
+      "mid_phrase_changes": [
+        {
+          "at_beat": 16,
+          "active_strips": [3],
+          "brightness": 0.18,
+          "palette": "BlueOnly",
+          "strip_offset": [0, 0, 0, 0, 0]
+        }
+      ]
+    }
+  ]
+}

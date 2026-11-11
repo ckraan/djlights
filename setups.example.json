@@ -1,0 +1,53 @@
+{
+  "active": "cave",
+  "setups": {
+    "vault": [
+      {
+        "name": "Vault Strips",
+        "ip": "192.168.2.212",
+        "led_count": 1500,
+        "enabled": true,
+        "geometry": {
+          "type": "snake",
+          "segments": 5,
+          "leds_per_segment": 300,
+          "gap_px": 4
+        }
+      },
+      {
+        "name": "Back Strip",
+        "ip": "192.168.2.40",
+        "led_count": 768,
+        "enabled": true,
+        "geometry": {
+          "type": "linear",
+          "led_count": 768
+        }
+      }
+    ],
+    "cave": [
+      {
+        "name": "Cave Glorb 1",
+        "ip": "192.168.1.16",
+        "led_count": 120,
+        "enabled": true,
+        "geometry": {
+          "type": "snake",
+          "segments": 5,
+          "leds_per_segment": 300,
+          "gap_px": 15
+        }
+      },
+      {
+        "name": "Cave Glorb 2",
+        "ip": "192.168.1.182",
+        "led_count": 120,
+        "enabled": true,
+        "geometry": {
+          "type": "globe",
+          "led_count": 120
+        }
+      }
+    ]
+  }
+}

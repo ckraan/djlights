@@ -1,0 +1,37 @@
+# ── Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# ── OS / editors ────────────────────────────────────────
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# ── Secrets (never commit) ──────────────────────────────
+ai_config.json
+.env
+
+# ── Logs ────────────────────────────────────────────────
+*.log
+*.log.*
+
+# ── Generated per install ───────────────────────────────
+blt/djlights.blt
+
+# ── Personal rig / runtime data (created by the app) ────
+settings.json
+setups.json
+wled_devices.json
+djlights_prefs.json
+session_memory.json
+feedback_log.json
+learned_rules.json
+improved_plans.json
+track_plans.json
+vault_plans.json
+globe_plans.json
+metadata_cache.json
+*.json.bak
